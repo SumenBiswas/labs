@@ -1,0 +1,10 @@
+#!/bin/bash
+filepath="/home/user/document.txt"
+
+echo "${filepath#*/}"
+
+## Output :: home/user/document.txt (This command will search first / from the right)
+
+echo "${filepath##*/}"
+
+## Output :: document.txt (This command will search last / from the left)

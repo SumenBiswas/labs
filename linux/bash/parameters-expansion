@@ -1,0 +1,49 @@
+## sed --> search and replace
+> echo "One-Two-Three" | sed 's/Two/Four/' 
+    Output :: One-Four-Three
+
+-- If we ant to search a word and replace this word in the file 
+> sed -i 's/hello/hi' hello.txt
+	(This command will replae only first word of the line in the file (hello.txt'
+	Output ::	hi
+			hi
+			hi, hello, hello
+
+> sed -i -i 's/hello/hi/g' hello.txt
+	This command will search all the words 'hello' and replace with hi
+	Output ::	hi
+			hi
+			hi, hi, hi
+
+
+
+## awk --> Extract Fieds
+> echo "One-Two-Three" | awk -F- '{print $2}'
+    Output :: Two
+
+> echo "One:Two:Three" | awk -F: '{print $2}'
+    Output :: Two
+
+> echo "One Two Three" | awk '{print $2}'
+    Output :: Two
+
+## tr --> Translate Characters
+> echo "One-Two-Three" | tr 'a-z' 'A-Z'
+    Output :: ONE-TWO-THREE
+
+## cut - Extract Columns
+> echo "One-Two-Three" | cut -d- -f2
+    Output :: Two
+> echo "One:Two:Three" | cut -d: -f2
+    Output :: Two
+
+## Default Values
+name=""
+echo ${name} ## ------> No Output as name is blank or empty string.
+echo "Hello, ${name:-User}" ## -----> Output ::  Hello, User
+echo ${name} ## -----> No Output as User will not assign to name. 
+             ##        name is still blank or empty string.
+
+
+echo "Hello, ${name:=User}" ## Output :: Hello, User
+echo ${name} ## Output :: User because User' will overwrite the value of 'name'. 

@@ -1,0 +1,13 @@
+#!/bin/bash
+filename="document.txt"
+echo "${filename%.*}"
+
+## Output :: document
+
+filename="backup.2024.tar.gz"
+echo "${filename%.*}"
+
+## Output :: backup.2024.tar (This will look first . from the left)
+
+echo "${filename%%.*}"
+## Outpt :: backup (This will search last . from the left)
