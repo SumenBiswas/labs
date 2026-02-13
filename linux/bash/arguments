@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Script Name :: $0"
+echo "First Arument :: $1"
+echo "Second Argument :: $2"
+echo "All Arguments :: $@"
+echo "Number of Arguments :: $#"
+
+### COMMENT Block
+#Difference between $@ and $*
+#If we invoke this script ./args "Hello World" "Foo Bar"
+# "$@" will treat these are two arguments :: "Hello World" and "Foo Bar"
+# "$*" will treat as single argument :: "Hello World Foo Bar"
+#So advisable to use always "$@" instead of "$*"
+### End of Comment Block ###
+echo "Script executed successfully"
