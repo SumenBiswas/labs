@@ -1,0 +1,6 @@
+#!/bin/bash
+## ****** sed command is not required *******
+# echo $PATH | sed 's/:/\n/g'
+# Not efficient because sed will create a new subprocess
+#
+echo "${PATH//:/$'\n'}"

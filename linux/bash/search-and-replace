@@ -1,0 +1,22 @@
+#!/bin/bash
+text="hello world world world"
+
+## Output :: hello bash world world
+
+helloworldworldworld
+
+
+## Replace first match (***** sed command is not required *****)
+echo "${text/world/bash}"
+
+## Output :: hello bash bash bash
+
+
+## Replace all matches
+echo "${text//world/bash}"
+
+## Delete (Replace with nothing)
+echo "${text// /}"
+
+## Output :: helloworldworldworld
+

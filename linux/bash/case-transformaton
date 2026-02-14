@@ -1,0 +1,16 @@
+#!/bin/bash
+text="hello world"
+echo "${text^}"
+## Output :: Hello world (Converts first character in uppercase)
+
+echo "${text^^}"
+## Output :: HELLO WORLD (Converts all the chaacters in Uppercase)
+
+echo "${text,,}"
+## Output :: hello world (Converts all the characters in  loxercase)
+#
+# ******* tr is not required ********
+#
+
+
+
