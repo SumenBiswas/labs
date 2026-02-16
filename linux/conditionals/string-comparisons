@@ -1,0 +1,22 @@
+#!/bin/bash
+
+str1="hello"
+str2="world"
+
+[[ $str1 == $str2 ]] && echo "Equal" || echo "Not Equal" 
+
+[[ $str1 != $str2 ]] && echo "Not Equal" || echo "Equal"
+
+#
+## Empty or Not Empty
+#
+[[ -z "$name" ]] && echo "Empty"
+[[ -n "$name" ]] &&  echo "Not Empty" || echo "Empty"
+
+#
+## OperatorMeaning
+#	==Equal
+#	!=Not equal
+#	-z --> Zero length (empty)
+#	-n --> Non-zero length (not # empty)
+#

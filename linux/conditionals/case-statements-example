@@ -1,0 +1,23 @@
+#!/bin/bash
+
+case $1 in
+	start) 
+		echo "Starting service....."
+		;;
+	stop) 
+		echo "Stopping Sevice...."
+		;;
+	*)
+		echo "Usage $0 {start|stop}"
+		exit 1
+		;;
+esac
+
+#
+#
+## Each pattern ends with )
+## Each block ends with ;;
+## * is the default (matches anything)
+## esac ends the case
+#
+#

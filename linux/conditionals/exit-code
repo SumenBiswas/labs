@@ -1,0 +1,18 @@
+#!/bin/bash
+
+ls /etc/passwd
+echo "Exit Code :: $?"
+
+##  Output :: 0 (Success)
+
+ls /etc/password
+echo "Exit Code :: $?"
+
+## Output :: 1 (Error !=0)
+#
+#
+# The Rule --
+# 0 --> Success
+# Non-Zero (1-255) --> Failure
+#
+#

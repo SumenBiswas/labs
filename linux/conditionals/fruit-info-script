@@ -1,0 +1,30 @@
+#!/bin/bash
+[[ -z $1 ]] && echo "Fruit name is required" && exit 1
+
+fruit="$1"
+
+case "$fruit" in
+	apple)
+		echo "Red or Green"
+		;;
+	banana)
+		echo "Yellow"
+		;;
+	orange)
+		echo "Orange"
+		;;
+	grape)
+		echo "Purpole or Green"
+		;;
+	*)
+		echo "Unknown Fruit :: $fruit" >&2
+		exit 1
+		;;
+esac
+
+#
+## OperatorMeaning 	== Equal
+#			!= Not equal
+#			-z Zero length (empty)
+#			-n Non-zero length (not empty)
+#

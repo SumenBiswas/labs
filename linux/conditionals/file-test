@@ -1,0 +1,4 @@
+#!/bin/bash
+[[ -f /etc/passwd ]] && echo "File exists"
+[[ -d /home ]] && echo "Directory exists"
+[[ -x /bin/bash ]] && echo "Executable"

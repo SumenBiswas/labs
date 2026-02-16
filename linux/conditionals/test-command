@@ -1,0 +1,23 @@
+#!/bin/bash
+
+## RULE - 1)  Always use double brackets [[ ]], Never use single brackets [ ]
+## RULE - 2) Spaces are required around brackets and operators 
+
+name="hello world"
+
+#
+## Single Brackets - BREAKS
+##
+
+[ $name == "hello world" ]
+
+#
+## Output : ERROR [: too many arguments
+#
+## Double Brackets - WORKS
+[[ $name == "hello world" ]]
+echo "$?"
+
+## Output :: 0
+# No ERROR
+
