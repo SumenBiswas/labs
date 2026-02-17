@@ -1,0 +1,13 @@
+#!/bin/bash
+
+func_is_even(){
+	num=$1
+	(( num % 2 == 0 ))
+}
+
+if func_is_even "$1"; then
+	echo "$1 is EVEN"
+else
+	echo "$1 is ODD"
+fi
+

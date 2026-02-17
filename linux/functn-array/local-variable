@@ -1,0 +1,14 @@
+#!/bin/bash
+
+my_function(){
+## local variable can be definedby using 'local' keyword.
+	local name="Changed"
+	echo "Inside Function valuf of name :: $name"
+}
+
+name="Original"
+
+echo "Before Invoking Function value of name :: $name"
+my_function
+echo "After invking function value of name :: $name"
+

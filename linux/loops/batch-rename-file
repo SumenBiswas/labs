@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for file in *.txt ; do
+	[[ -f "$file" ]] || continue
+	##newfile="${file#backup-}"
+	newfile="backup-$file"
+	echo "$newfile"
+	mv "$file" "$newfile"
+done

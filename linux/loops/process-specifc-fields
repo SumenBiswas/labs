@@ -1,0 +1,12 @@
+#!/bin/bash
+# /etc/passwd format: user:x:uid:gid:info:home:shell
+while IFS=: read -r user _ uid gid _ home shell; do
+    echo "$user (UID $uid) uses $shell"
+done < /etc/passwd
+
+#
+## IFS=: sets field separator to colon
+## IFS=: sets field separator to colon
+## IFS controls word splitting. IFS=: to read /etc/passwd fields. Understand tha##  t read splits on IFS. This is powerful. 
+#
+#

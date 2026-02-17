@@ -1,0 +1,29 @@
+#!/bin/bash
+
+## Declaring an Array ::
+fruits=("Apple" "Banana" "Orange" "Grape")
+
+# Single element (zero-indexed)
+echo "${fruits[0]}"
+# apple
+
+# All elements
+echo "${fruits[@]}"
+# apple banana orange
+
+# Length
+echo "${#fruits[@]}"
+# 3
+
+# Add element
+fruits+=("Pears")
+
+
+## Array Iteration ::
+
+for fruit in "${fruits[@]}"; do
+	echo "I like $fruit"
+done
+
+### Use "${arr[@]}" (with quotes) to handle elements with spaces correctly.
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+while read -r line; do
+    echo "Line: $line"
+done < /etc/hosts
+
+#
+## read -r line reads one line into variable line.
+## -r prevents backslash interpretation (always use it).
+## < file redirects the file as input
+##  Always read -r. Without -r, backslashes get interpreted. Someone’s data has ##                           a backslash? Script breaks.
+##
+#
+#
